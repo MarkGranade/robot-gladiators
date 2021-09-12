@@ -162,9 +162,22 @@ var shop = function() {
   }
 };
 
-// PLAYER AND ENEMY OBJECTS
+// GETPLAYERNAME FUNCTION
+var getPlayerName = function() {
+  var name = '';
+
+  // ADD LOOP HERE WITH PROMPT AND CONDITION
+  while (name === '' || name === null) {
+    name = prompt('What is your robot\'s name?');
+  }
+
+  console.log('Your robot\'s name is ' + name);
+  return name;
+};
+
+// GAME INFORMATION / VARIABLES
 var playerInfo = {
-  name: window.prompt('What is your robot\'s name?'),
+  name: getPlayerName,
   health: 100,
   attack: 10,
   money: 10,
@@ -192,6 +205,7 @@ var playerInfo = {
     }
   }
 };
+// ENEMY OBJECTS
 var enemyInfo = [
   {
     name: 'Roborto',
